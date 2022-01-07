@@ -2,7 +2,19 @@
     min-width: 696px;
     width: 100%;
     position: relative;
-    top: -300px;
+    top: 0px;
+}
+.logoWhite {
+    margin: 50px auto;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    right: 40%;
+    z-index: 8;
+    overflow: hidden;
+}
+.logoWhite img {
+    width: 100%;
 }
 .video{
     position: relative;
@@ -63,8 +75,6 @@
     margin-right: auto;
 }
 .p-home-body-mid {
-    position: relative;
-    top: -300px;
 	background-color: #66D1FC;
 	padding: 50px 0 225px;
 	overflow: hidden;

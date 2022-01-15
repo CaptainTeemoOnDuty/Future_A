@@ -42,10 +42,10 @@
     right: 100px;
 }
 .item{
-    background: #000;
+    background: #000680;
     padding: 10px;
     border-radius: 20px;
-    border: 1px solid #000; 
+    border: 1px solid #000680; 
     box-sizing: border-box;
 }
 .item:hover{
@@ -54,14 +54,14 @@
 .item img{
     width: 100%;
     border-radius: 20px 20px 0 0;
-    border: 1px solid #000; 
+    border: 1px solid #000680; 
     box-sizing: border-box;
 }
 .item .txt{
     line-height: 1.6;
     width: 100%;
     text-align: center;
-    color: #8CDDFD;
+    color: #fff;
 }
 /*手機專用*/
 @media screen and (max-width: 767px){

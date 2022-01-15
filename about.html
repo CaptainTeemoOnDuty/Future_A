@@ -7,8 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/cssReset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
     
@@ -17,18 +20,16 @@
     <input type="checkbox" name="" id="menu_control">
 
     <div class="header">
-        <h1 class="logo">
+        <h1 class="logo hvr-wobble-vertical">
             <a href="home.html"><img src="image/logo-white-top.png"></a>
         </h1>
-        <label for="menu_control" class="menu_btn">
-            <span>選單</span>
-        </label>
-        <nav>
+        <label for="menu_control" class="menu_btn"></label>
+        <nav class="main-nav">
             <a href="news.html">最新消息<i class="fas fa-chevron-circle-right"></i></a>
             <a href="traffic.html">交通資訊<i class="fas fa-chevron-circle-right"></i></a>
             <a href="ticket.html">線上購票<i class="fas fa-chevron-circle-right"></i></a>
             <a href="shop.html">精選商品<i class="fas fa-chevron-circle-right"></i></a>
-            <a href="about.html">關於我們<i class="fas fa-chevron-circle-right"></i></a>
+            <a href="about.html" class="active-page">關於我們<i class="fas fa-chevron-circle-right"></i></a>
         </nav>
         <ul class="menu_list drop_down_menu">
             <div class="language_li"><p>language</p>
@@ -51,9 +52,43 @@
         </a>
     </div>
     
+    <div class="about">
+        <h2>關於我們</h2>
+        <div class="about-txt">
+            <div class="col-6 col-md-6 col-lg-6 col-xl-6 txt">
+                <h3>關於Future A水族館</h3>
+                <p>Future A水族館是理想中未來的海洋。
+                驅使最先端的科技，營造出環境的溫度、濕度、氣味、聲音。<br>
+                帶您到海洋中每個不可思議的角落，受到啟發、感受療癒、洗滌心靈。 <br>
+                這是一個保存並延續生命、生物、生存、生態、生活的水族世界。</p>
+            </div>
+            <div class="space col-6"></div>
+        </div>
+        <div class="about-txt">
+            <div class="col-6 col-md-6 col-lg-6 col-xl-6 txt">
+                <h3>完全使用人造海水</h3>
+                <p>Future A水族館使用專有的人工海水生產系統，在所有水箱中完全使用人造海水。 這是台灣的水族館，之後使用該系統 由歐力力士房地產公司經營。 該系統有助於抑制大型卡車運輸海水中的二氧化碳排放，這是內陸水族館的一個問題。 此外，由於它可以使水質全年保持在一致的水平，它為水族箱中的水生生物提供了舒適的環境，並使水族館能夠提供精美的展品。</p>
+            </div>
+            <div class="space col-6"></div>
+        </div>
+        <div class="about-txt">
+            <div class="col-6 col-md-6 col-lg-6 col-xl-6 txt">
+                <h3>參觀動線</h3>
+                <p>Future A水族館位於台北市101大樓的2樓和3樓，分為兩層。 它不是從入口處單向交通流，而是採用開放式流水線，讓遊客可以在水族館中自由遊蕩，就像在公園裡一樣。 有三條連接上層和下層的路線，每條路線都提供了一種享受水族館的不同方式。 沒有固定的路線，可以從各種角度和視點觀察水族箱。 在水族箱前面安排了許多座位，目的是創造一個空間，遊客可以以自己的方式欣賞展品，以更輕鬆的節奏凝視著水族箱。</p>
+            </div>
+            <div class="space col-6"></div>
+        </div>
+        <div class="about-txt">
+            <div class="col-6 col-md-6 col-lg-6 col-xl-6 txt">
+                <h3>讓遊客更接近水生生物和水族館工作人員</h3>
+                <p>Future A水族館旨在成為一個水族館，遊客，水生生物和工作人員可以更加接近。 在台灣最大的室內開放式坦克之一，遊客可以近距離接觸，幾乎可以感受到企鵝和海豹的氣息，讓他們感受到他們正在共享一個連接的空間。 還建立了一個區域，向遊客展示水族館的幕後“後院”操作，包括水族館飼養員照顧他們護理的生物的位置。 通過與水族館工作人員交談，遊客可以獲得有關展品的實時信息，並在每次訪問時享受新的興奮和發現。</p>
+            </div>
+            <div class="space col-6"></div>
+        </div>
+    </div>
     <!-- footer -->
 
-    <div class="bottom">
+    <div class="bottom-white">
         <footer>
             <div class="waves">
                 <div class="wave" id="wave1"></div>
@@ -61,6 +96,8 @@
                 <div class="wave" id="wave3"></div>
                 <div class="wave" id="wave4"></div>
             </div>
+            <div id="top" data-text="go to top"><img src="image/icon/jellyfish.png" alt="go to top"></div>
+            <div id="theDiv"></div>
             <ul class="social_icon">
                 <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
                 <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
@@ -74,11 +111,26 @@
                 <li><a href="shop.html">精選商品</a></li>
                 <li><a href="about.html">關於我們</a></li>
             </ul>
-            <p>copyright &copy; 2021 Future-A</p>
+            <p>copyright &copy; 2021 Future A</p>
         </footer>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div>
-
+    <script>
+        let btn = document.getElementById('top')
+        function toTop(){window.scroll({top: 0, left: 0, behavior: 'smooth'});
+        }
+        btn.addEventListener('click', toTop, false)
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+		$(function () {
+			$('#top').mousemove(function(e){
+				let theText = $(this).attr('data-text')
+				$('#theDiv').show().text(theText)
+			}).mouseout(function(){
+				$('#theDiv').hide();
+			});
+		});		
+	</script>
 </body>
 </html>

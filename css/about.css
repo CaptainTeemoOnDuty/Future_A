@@ -1,0 +1,64 @@
+.about{
+    width: 100%;
+    background-color: #8CDDFD;
+    padding: 140px 0 225px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    font-family:'Noto Sans TC', sans-serif;
+}
+.about h2{
+    font-size: 36px;
+    text-align: center;
+    color: #000680;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.about-txt{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    font-size: 22px;
+    color: #000680;
+    line-height: 1.8;
+    align-items: center;
+    box-sizing: border-box;
+}
+.about-txt .space{
+    background-image: url(../image/Jellyfish.jpg);
+    background-position: right;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 400px;
+    box-sizing: border-box;
+}
+.about-txt:nth-child(odd) .space{
+    background-image: url(../image/Fish.jpg);
+    background-position: left;
+}
+.txt{
+    background-color: #8CDDFD;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.txt h3{
+    font-size: 28px;
+    border-bottom: 1px solid #000680;
+    margin-bottom: 10px;
+}
+.about-txt:nth-child(odd){
+    flex-direction: row-reverse;
+}
+/*手機專用*/
+@media screen and (max-width: 767px){
+    .about-txt{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .txt h3{
+        font-size: 24px;
+    }
+}

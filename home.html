@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Document</title>
+    <title>Future A</title>
     <link rel="icon" href="image/LOGO100.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/cssReset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/test.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
     
@@ -19,13 +21,11 @@
     <input type="checkbox" name="" id="menu_control">
 
     <div class="header">
-        <h1 class="logo">
+        <h1 class="logo hvr-wobble-vertical">
             <a href="home.html"><img src="image/logo-white-top.png"></a>
         </h1>
-        <label for="menu_control" class="menu_btn">
-            <span>選單</span>
-        </label>
-        <nav>
+        <label for="menu_control" class="menu_btn"></label>
+        <nav class="main-nav">
             <a href="news.html">最新消息<i class="fas fa-chevron-circle-right"></i></a>
             <a href="traffic.html">交通資訊<i class="fas fa-chevron-circle-right"></i></a>
             <a href="ticket.html">線上購票<i class="fas fa-chevron-circle-right"></i></a>
@@ -51,8 +51,8 @@
             <img src="image/logo-white.png" alt="logo">
         </div>
         <div class="video">
-            <video class="video-v" src="video/video.mp4"width="100%" autoplay="" loop="" muted="" playsinline="" style="width: 100%; left: 0px; min-width: 650px; right: 0px; top: -102.219px; object-fit: cover;"></video>
-            <div class="evenday">
+            <video class="video-v" src="video/video.mp4"width="100%" autoplay="" loop="" muted="" playsinline="" style="width: 100%; left: 0px; right: 0px; top: -102.219px; object-fit: cover;"></video>
+            <div class="business-hours">
                 <div class="time">每日營業時間 11:00AM ~ 9:30PM
                 全年無休</div>
                 <div class="buy">
@@ -94,10 +94,8 @@
                         </div>
                     </div>
                     <div class="p-home-body-mid-image u-hidden-sp">
-                        <img src="image/img_about_clownfish.png" alt=""
-                                class="p-home-body-mid-image-item p-home-body-mid-image-item--about-man">
-                        <img src="image/img_about_sea ​​urchin.png" alt=""
-                                class="sea-urchin">
+                        <img src="image/img_about_clownfish.png" alt="" class="p-home-body-mid-image-item p-home-body-mid-image-item--about-man">
+                        <img src="image/img_about_sea ​​urchin.png" alt="" class="sea-urchin">
                     </div>
                 </div>
             </div>
@@ -112,11 +110,10 @@
                         <div class="p-home-body-mid-head">
                             <h2 class="p-home-body-mid-head__ja">精彩表演</h2>
                             <p class="p-home-body-mid-head__en">海豚傳說-跳浪奇緣</p>
-    
                         </div>
                         
                         <p class="p-home-body-mid-body">超級人氣水中精靈「海豚秀」、可愛逗趣「海獅巡警隊」、全台唯一「海洋探索館」互動體驗與水晶城堡超強卡司「奇妙海洋慶典」四大國際級主題表演水準。</p>
-    
+
                         <div class="p-home-body-mid-more"><a href="Future-A4-ticket.html" class="c-button-round-white">查看演出時間</a></div>
                     </div>
                     <div class="p-home-body-mid-image u-hidden-sp">
@@ -149,9 +146,9 @@
                     </div>
                     <div class="p-home-body-mid-image u-hidden-sp">
                         <img src="image/img_about_plants.png" alt=""
-                                class="p-home-body-mid-image-item p-home-body-mid-image-item--about-man">
+                                class="p-home-body-mid-image-item plants">
                         <img src="image/img_about_turtle.png" alt=""
-                                class="p-home-body-mid-image-item p-home-body-mid-image-item--about-woman">
+                                class="p-home-body-mid-image-item turtle">
                     </div>
                 </div>
             </div>
@@ -175,11 +172,12 @@
                     </div>
                     <div class="p-home-body-mid-image u-hidden-sp">
                         <img src="image/img_about_ball.png" alt=""
-                            class="ball">
-                        <img src="image/img_about_whale.png" alt=""
-                            class="whale">
+                            class="p-home-body-mid-image-item ball">
                         <img src="image/img_about_shell.png" alt=""
-                            class="shell">
+                            class="p-home-body-mid-image-item shell">
+                        <img src="image/img_about_whale.png" alt=""
+                            class="p-home-body-mid-image-item whale">
+                        
                     </div>
                 </div>
             </div>
@@ -196,6 +194,8 @@
                 <div class="wave" id="wave3"></div>
                 <div class="wave" id="wave4"></div>
             </div>
+            <div id="top" data-text="go to top"><img src="image/icon/jellyfish.png" alt="go to top" name="go to top"></div>
+            <div id="theDiv"></div>
             <ul class="social_icon">
                 <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
                 <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
@@ -209,11 +209,70 @@
                 <li><a href="shop.html">精選商品</a></li>
                 <li><a href="about.html">關於我們</a></li>
             </ul>
-            <p>copyright &copy; 2021 Future-A</p>
+            <p>copyright &copy; 2021 Future A</p>
         </footer>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div>
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/scroll-behavior-polyfill@2.0.13/dist/index.min.js"></script>
+
+    <script>
+        let btn = document.getElementById('top')
+        function toTop(){window.scroll({top: 0, left: 0, behavior: 'smooth'});
+        }
+        btn.addEventListener('click', toTop, false)
+    </script>
+
+    <script>
+        let alertmessage="'This website is a study project of a student from front-end design engineer class of Weiyu TibaMe Educational Institution. This platform is for learning purposes only. This platform is not for commercial use. If you have concerns about infringement, you can contact with TibaMe and the follow-up will be handled by a dedicated person.'"
+        
+        function get_cookie(Name) {
+            var search = Name + "=";
+            var returnvalue = "";
+            if (document.cookie.length > 0) {
+                offset = document.cookie.indexOf(search)
+                if (offset != -1) { // if cookie exists
+                    offset += search.length;
+                    end = document.cookie.indexOf(";", offset);
+                    if (end == -1)
+                        end = document.cookie.length;
+                    returnvalue=document.cookie.substring(offset, end);
+                }
+            }
+            return returnvalue;
+        }
+        
+        // var show = true;
+        
+        // if(get_cookie('alerted') == 'yes'){
+        //     show = false
+        //     console.log("show= false");
+        // }
+        
+        // if(show){
+        //     var rus = confirm(alertmessage);
+        // }
+        
+        // if(rus == true){
+        //     document.cookie="alerted=yes";
+        // }
+        
+        if(get_cookie('alerted') != 'yes'){
+            alert(alertmessage);
+            document.cookie="alerted=yes";
+        }
+    </script>
+    <script>
+		$(function () {
+			$('#top').mousemove(function(e){
+				let theText = $(this).attr('data-text')
+				$('#theDiv').show().text(theText)
+			}).mouseout(function(){
+				$('#theDiv').hide();
+			});
+		});		
+	</script>
 </body>
 </html>

@@ -15,9 +15,20 @@
 .p-home-body-mid-content.p-home-body-mid-content--reverse {
     flex-direction: row-reverse;
 }
+
+/* 阿勇的rwd從20-33 */
 @media screen and (max-width: 768px) {
     .p-home-body-mid-content {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        text-align: center;
+   }
+   .p-home-body-mid-content.p-home-body-mid-content--reverse{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        text-align: center;
    }
 }
 .p-home-body-mid-text {
@@ -32,23 +43,23 @@
 }
 .p-home-body-mid-head__ja {
     color: #fff;
-    font-size: 3.2rem;
+    font-size: 1.6rem;
     line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
     .p-home-body-mid-head__ja {
-        font-size: 2.6rem;
+        font-size: 1.2rem;
    }
 }
 .p-home-body-mid-head__en {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1.5;
     margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
     .p-home-body-mid-head__en {
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-top: 5px;
    }
 }
@@ -138,14 +149,14 @@
 .p-home-body-mid-image-item--about-man {
     width: 356px;
     top: 92px;
-    left: 148px;
+    left: 90px;
     animation: FloatVertical1 4s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 768px) {
     .p-home-body-mid-image-item--about-man {
         width: 190px;
-        top: 70px;
-        left: 80px;
+        top: 80px;
+        left: 15px;
    }
 }
 .p-home-body-mid-image-item--about-woman {
@@ -187,44 +198,109 @@
 }
 .p-home-body-mid-image-item--recycle-man {
     width: 216px;
-    top: 22px;
-    right: 310px;
+    top: 50px;
+    right: 280px;
     animation: FloatVertical1 4s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 768px) {
     .p-home-body-mid-image-item--recycle-man {
         width: 116px;
-        top: 30px;
-        left: -22px;
+        top: 40px;
+        left: -2px;
         right: auto;
    }
 }
 .p-home-body-mid-image-item--recycle-earth {
     width: 140px;
-    top: 84px;
+    top: 160px;
     right: 200px;
     animation: FloatVertical3 4s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 768px) {
     .p-home-body-mid-image-item--recycle-earth {
         width: 75px;
-        top: 62px;
+        top: 100px;
         right: auto;
-        left: 76px;
+        left: 75px;
    }
 }
 .p-home-body-mid-image-item--recycle-woman {
-    width: 176px;
-    top: 40px;
+    width: 200px;
+    top: 150px;
     right: 45px;
     animation: FloatVertical1 4s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 768px) {
     .p-home-body-mid-image-item--recycle-woman {
-        width: 94px;
-        top: 38px;
+        width: 110px;
+        top: 100px;
         right: auto;
-        left: 140px;
+        left: 120px;
+   }
+}
+.plants {
+    width: 356px;
+    top: 192px;
+    left: 90px;
+    animation: FloatVertical1 4s ease-in-out infinite alternate;
+}
+@media screen and (max-width: 768px) {
+    .plants {
+        width: 190px;
+        top: 130px;
+        left: 15px;
+   }
+}
+.turtle {
+    width: 330px;
+    top: 92px;
+    left: 100px;
+    animation: FloatVertical2 4s ease-in-out infinite alternate;
+}
+@media screen and (max-width: 768px) {
+    .turtle {
+        width: 190px;
+        top: 80px;
+        left: 15px;
+   }
+}
+.ball {
+    width: 56px;
+    top: 100px;
+    right: 400px;
+    animation: FloatVertical2 4s ease-in-out infinite alternate;
+}
+@media screen and (max-width: 768px) {
+    .ball {
+        width: 30px;
+        top: 60px;
+        left: 15px;
+   }
+}
+.shell {
+    width: 80px;
+    top: 270px;
+    right: 150px;
+    animation: FloatVertical3 4s ease-in-out infinite alternate;
+}
+@media screen and (max-width: 768px) {
+    .shell {
+        width: 50px;
+        top: 150px;
+        left: 130px;
+   }
+}
+.whale {
+    width: 356px;
+    top: 70px;
+    right: 80px;
+    animation: FloatVertical1 4s ease-in-out infinite alternate;
+}
+@media screen and (max-width: 768px) {
+    .whale {
+        width: 190px;
+        top: 60px;
+        left: 15px;
    }
 }
 @keyframes FloatVertical1 {

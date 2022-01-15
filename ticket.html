@@ -7,8 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/cssReset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
     
@@ -17,16 +19,14 @@
     <input type="checkbox" name="" id="menu_control">
 
     <div class="header">
-        <h1 class="logo">
+        <h1 class="logo hvr-wobble-vertical">
             <a href="home.html"><img src="image/logo-white-top.png"></a>
         </h1>
-        <label for="menu_control" class="menu_btn">
-            <span>選單</span>
-        </label>
-        <nav>
+        <label for="menu_control" class="menu_btn"></label>
+        <nav class="main-nav">
             <a href="news.html">最新消息<i class="fas fa-chevron-circle-right"></i></a>
             <a href="traffic.html">交通資訊<i class="fas fa-chevron-circle-right"></i></a>
-            <a href="ticket.html">線上購票<i class="fas fa-chevron-circle-right"></i></a>
+            <a href="ticket.html" class="active-page">線上購票<i class="fas fa-chevron-circle-right"></i></a>
             <a href="shop.html">精選商品<i class="fas fa-chevron-circle-right"></i></a>
             <a href="about.html">關於我們<i class="fas fa-chevron-circle-right"></i></a>
         </nav>
@@ -44,7 +44,7 @@
 
     <!-- footer -->
 
-    <div class="bottom">
+    <div class="bottom-white">
         <footer>
             <div class="waves">
                 <div class="wave" id="wave1"></div>
@@ -52,6 +52,8 @@
                 <div class="wave" id="wave3"></div>
                 <div class="wave" id="wave4"></div>
             </div>
+            <div id="top" data-text="go to top"><img src="image/icon/jellyfish.png" alt="go to top"></div>
+            <div id="theDiv"></div>
             <ul class="social_icon">
                 <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
                 <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
@@ -65,11 +67,33 @@
                 <li><a href="shop.html">精選商品</a></li>
                 <li><a href="about.html">關於我們</a></li>
             </ul>
-            <p>copyright &copy; 2021 Future-A</p>
+            <p>copyright &copy; 2021 Future A</p>
         </footer>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div>
-
+    <script>
+        let btn = document.getElementById('top')
+        // function toTop(){
+        //     window.scroll({
+        //         behavior: "smooth",
+        //         top: 100,
+        //         left: 0
+        //     });
+        // }
+        function toTop(){window.scroll({top: 0, left: 0, behavior: 'smooth'});
+        }
+        btn.addEventListener('click', toTop, false)
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+		$(function () {
+			$('#top').mousemove(function(e){
+				let theText = $(this).attr('data-text')
+				$('#theDiv').show().text(theText)
+			}).mouseout(function(){
+				$('#theDiv').hide();
+			});
+		});		
+	</script>
 </body>
 </html>

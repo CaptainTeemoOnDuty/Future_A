@@ -1,5 +1,4 @@
 .banner {
-    min-width: 696px;
     width: 100%;
     position: relative;
     top: 0px;
@@ -7,10 +6,10 @@
 .logoWhite {
     margin: 50px auto;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 40%;
     right: 40%;
-    z-index: 8;
+    z-index: 500;
     overflow: hidden;
 }
 .logoWhite img {
@@ -19,8 +18,7 @@
 .video{
     position: relative;
 }
-.evenday {
-    min-width: 696px;
+.business-hours {
     display: flex;
     width: 100%;
     position: absolute;
@@ -29,7 +27,7 @@
     text-align: center;
     z-index: 999;
 }
-.evenday .time {
+.business-hours .time {
     height: 56px;
     position: absolute;
     width: 50%;
@@ -41,6 +39,21 @@
     box-sizing: border-box;
     background-color: #14165e;
     color: #fff;
+}
+@media screen and (max-width:680px) {
+    .business-hours .time {
+        padding: 15px;
+    }
+}
+@media screen and (max-width:404px) {
+    .business-hours .time {
+        padding: 10px;
+    }
+}
+@media screen and (max-width:284px) {
+    .business-hours .time {
+        padding: 5px;
+    }
 }
 .buy {
     height: 56px;
@@ -211,46 +224,10 @@
 }
 .sea-urchin{
     position: absolute;
-    width: 76px;
-    top: 250px;
-    left: 250px;
+    width: 36px;
+    top: 170px;
+    left: 95px;
     animation: FloatVertical3 4s ease-in-out infinite alternate;
-}
-.ball{
-    position: absolute;
-    width: 60px;
-    top: 65px;
-    left: 50px;
-    animation: FloatVertical3 4s ease-in-out infinite alternate;
-}
-.whale{
-    position: absolute;
-    width: 350px;
-    top: 50px;
-    left: 70px;
-    animation: FloatVertical3 4s ease-in-out infinite alternate;
-}
-.shell{
-    position: absolute;
-    width: 80px;
-    top: 230px;
-    left: 300px;
-    animation: FloatVertical2 4s ease-in-out infinite alternate;
-}
-@keyframes FloatVertical1 {
-	0% { transform:translate3d(0,15px,0); }
-	50% { transform:translate3d(0,-15px,0); }
-	100% { transform:translate3d(0,15px,0); }
-}
-@keyframes FloatVertical2 {
-	0% { transform:translate3d(0,-15px,0); }
-	50% { transform:translate3d(0,15px,0); }
-	100% { transform:translate3d(0,-15px,0); }
-}
-@keyframes FloatVertical3 {
-	0% { transform:translate3d(0,-5px,0); }
-	50% { transform:translate3d(0,5px,0); }
-	100% { transform:translate3d(0,-5px,0); }
 }
 .c-button-round-white {
     color: #0B5BA9;
@@ -285,5 +262,13 @@
     }
     .video {
         width: 100%;
+    }
+    .logoWhite {
+        top: 20%;
+    }
+    .sea-urchin{
+        width: 76px;
+        top: 250px;
+        left: 250px;
     }
 }

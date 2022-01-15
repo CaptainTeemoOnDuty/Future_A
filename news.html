@@ -7,8 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/cssReset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/news.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
     
@@ -17,14 +19,12 @@
     <input type="checkbox" name="" id="menu_control">
 
     <div class="header">
-        <h1 class="logo">
+        <h1 class="logo hvr-wobble-vertical">
             <a href="home.html"><img src="image/logo-white-top.png"></a>
         </h1>
-        <label for="menu_control" class="menu_btn">
-            <span>選單</span>
-        </label>
-        <nav>
-            <a href="news.html">最新消息<i class="fas fa-chevron-circle-right"></i></a>
+        <label for="menu_control" class="menu_btn"></label>
+        <nav class="main-nav">
+            <a href="news.html" class="active-page">最新消息<i class="fas fa-chevron-circle-right"></i></a>
             <a href="traffic.html">交通資訊<i class="fas fa-chevron-circle-right"></i></a>
             <a href="ticket.html">線上購票<i class="fas fa-chevron-circle-right"></i></a>
             <a href="shop.html">精選商品<i class="fas fa-chevron-circle-right"></i></a>
@@ -50,14 +50,65 @@
             <img class="big_img" src="image/side_booking.png" alt="">
         </a>
     </div>
-    
-    <div class="news_menu">
 
+    <!-- 切換圖片 -->
+
+    <div class="announcement">
+        <h2>最新消息</h2>
+        <div class="txt">
+            <button id="recover">本館公告</button>
+            <button id="change">活動消息</button>
+        </div>
+        <div class="content">
+            <div class="item hvr-sweep-to-top">
+                <a href="#">
+                    <img src="image/CO19-2022.jpg">
+                </a>
+                <p>2021.12.28</p>
+                <h4>防疫安全遊</h4>
+                <p>為防範covid-19<br>
+                請配合政府防疫措施<br>
+                入館務必配戴口罩，<br>
+                用餐時避免交談<br>
+                並請遵守社交1.5公尺安全距離<br>
+                如有發燒、咳嗽等身體不適情況，請立即就醫<br>
+                Future A 關心您</p>
+            </div>
+            <div class="item hvr-sweep-to-top">
+                <a href="shop.html">
+                    <img src="image/Kimetsu no Yaiba.jpg">
+                </a>
+                <p>2021.12.24</p>
+                <h4>夢幻聯名</h4>
+                <p>鬼滅之刃 x Future A<br>
+                水之呼吸一門在Future A展開修行<br>
+                限定期間可於展場內尋找他們的身影喔！<br>
+                蒐集印章、完成招式練習，<br>
+                一起加入鬼殺隊的行列吧！<br>
+                活動期間將分別推出限定商品，數量有限，請把握機會收藏！</p>
+            </div>
+            <div class="item hvr-sweep-to-top">
+                <a href="ticket.html">
+                    <img src="image/news 2022.jpg">
+                </a>
+                <p>2021.10.8</p>
+                <h4>振興藝起來</h4>
+                <p>即日起，全館開放使用5倍券、<br>
+                藝fun券，好禮加碼再放大！<br>
+                憑券購票享9折<br>
+                餐廳、商店憑券消費<br>
+                最多可享8折優惠<br>
+                快揪親朋好友一起來<br>
+                Future A歡樂同遊<br>
+                Future A保留活動最終解釋權</p>
+            </div>
+        </div>
+        <a href="news.html"><button class="more" style="font-size: 28px;">更多消息</button></a>
     </div>
 
     <!-- footer -->
 
-    <div class="bottom">
+    <div class="bottom-white">
         <footer>
             <div class="waves">
                 <div class="wave" id="wave1"></div>
@@ -65,6 +116,8 @@
                 <div class="wave" id="wave3"></div>
                 <div class="wave" id="wave4"></div>
             </div>
+            <div id="top" data-text="go to top"><img src="image/icon/jellyfish.png" alt="go to top"></div>
+            <div id="theDiv"></div>
             <ul class="social_icon">
                 <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
                 <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
@@ -78,11 +131,47 @@
                 <li><a href="shop.html">精選商品</a></li>
                 <li><a href="about.html">關於我們</a></li>
             </ul>
-            <p>copyright &copy; 2021 Future-A</p>
+            <p>copyright &copy; 2021 Future A</p>
         </footer>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let btn = document.getElementById('top')
+        function toTop(){window.scroll({top: 0, left: 0, behavior: 'smooth'});
+        }
+        btn.addEventListener('click', toTop, false)
+    </script>
 
+    <script>
+        let change = document.getElementById('change');
+
+        let recover = document.getElementById('recover');
+
+        let img = document.querySelectorAll('.announcement .content .item img')
+
+        function picChange(){
+            img[0].src = "image/bigfish2022.jpeg"
+            img[1].src = "image/passport2022.jpg"
+            img[2].src = "image/S__157908997.jpg"
+        }
+        function picRecover(){
+            img[0].src = "image/CO19-2022.jpg"
+            img[1].src = "image/Kimetsu no Yaiba.jpg"
+            img[2].src = "image/news 2022.jpg"
+        }
+        change.addEventListener('click', picChange, false)
+        recover.addEventListener('click', picRecover, false)
+    </script>
+    <script>
+		$(function () {
+			$('#top').mousemove(function(e){
+				let theText = $(this).attr('data-text')
+				$('#theDiv').show().text(theText)
+			}).mouseout(function(){
+				$('#theDiv').hide();
+			});
+		});		
+	</script>
 </body>
 </html>

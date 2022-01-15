@@ -1,0 +1,103 @@
+.container{
+    padding: 140px 0 225px;
+    background-color: #8CDDFD;
+}
+.container h2{
+    font-size: 36px;
+    text-align: center;
+    font-family:'Noto Sans TC', sans-serif;
+    color: #000680;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.row{
+    width: 90%;
+    background-color: #8CDDFD;
+    /* padding: 40px 0 25px; */
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    position: relative;
+    /* box-sizing: border-box; */
+    flex-direction: column;
+    z-index: 1;
+}
+.row::before,
+.row::after{
+    content: "";
+    display: block;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border: 80px solid rgba(255, 255, 255, .25);
+    position: absolute;
+    z-index: -100;
+}
+.row::before{
+    top: 100px;
+    left: 100px;
+}
+.row::after{
+    top: 840px;
+    right: 100px;
+}
+.item{
+    background: #000;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #000; 
+    box-sizing: border-box;
+}
+.item:hover{
+    opacity: .8;
+}
+.item img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    border: 1px solid #000; 
+    box-sizing: border-box;
+}
+.item .txt{
+    line-height: 1.6;
+    width: 100%;
+    text-align: center;
+    color: #8CDDFD;
+}
+/*手機專用*/
+@media screen and (max-width: 767px){
+    /* .row{
+        padding: 0px;
+    } */
+    .row::before,
+    .row::after{
+        width: 250px;
+        height: 250px;
+    }
+    .row::before{
+        top: 10px;
+        left: 10px;
+    }
+    .row::after{
+        top: 1120px;
+        right: 10px;
+    }
+    .item{
+        max-width: 580px;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width:768px){
+    .wrap{
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .item{
+        width: 100%;
+        margin: 0 10px;
+        box-sizing: border-box;
+    }
+}

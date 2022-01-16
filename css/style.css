@@ -38,6 +38,7 @@ nav a{
     padding: 16px;
     display: flex;
     justify-content: space-between;
+    transition: .3s;
 }
 .main-nav a:hover{
     color: #f3c321;

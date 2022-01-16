@@ -249,6 +249,7 @@
     transition: color .2s, background-color .3s, box-shadow .3s, -webkit-box-shadow .3s;
     text-decoration: none;
     box-sizing: border-box;
+    transition: .5s;
 }
 .c-button-round-white:hover {
     color: #fff;

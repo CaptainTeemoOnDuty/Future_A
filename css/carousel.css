@@ -1,0 +1,24 @@
+.slick-slider{
+    width: 100%;
+    background-color: #8CDDFD;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    font-family:'Noto Sans TC', sans-serif;
+    margin: auto;
+}
+.slick-list{
+    margin-left: 5%;
+    width: 90%;
+}
+.txt P{
+    font-size: 36px;
+    text-align: center;
+    font-family:'Noto Sans TC', sans-serif;
+    color: #000680;
+    font-weight: 300;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}

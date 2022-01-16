@@ -13,12 +13,18 @@
     margin-left: 5%;
     width: 90%;
 }
-.txt P{
+.txt p{
     font-size: 36px;
     text-align: center;
     font-family:'Noto Sans TC', sans-serif;
     color: #000680;
     font-weight: 300;
+    line-height: 1.5;
     margin-top: 100px;
     margin-bottom: 100px;
+}
+@media screen and (max-width: 767px){
+    .txt p{
+        padding: 10px;
+    }
 }

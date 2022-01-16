@@ -153,17 +153,19 @@ article p{
 }
 /*手機專用*/
 @media screen and (max-width: 767px){
+    .ticket::before,
+    .ticket::after{
+    width: 300px;
+    height: 300px;
+    }
     .navbar{
         left: 75%; 
         background-color: transparent; 
-    }
+    } 
     article h2, article p, .footer h3{
         font-size: 20px;
     }
     article p{
-        padding-left: 0;
-    }
-    .img-left img{
         padding-left: 0;
     }
 }

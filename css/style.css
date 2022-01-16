@@ -215,6 +215,16 @@ ul.language a {
     opacity: 1;
     border: 4px solid #66d1fc;
 }
+.language_li:focus .language {
+    display: block;
+    opacity: 1;
+    border: 4px solid #66d1fc;
+}
+.language_li:active .language {
+    display: block;
+    opacity: 1;
+    border: 4px solid #66d1fc;
+}
 .buy_ticket .big_img{
     display: none;
 }

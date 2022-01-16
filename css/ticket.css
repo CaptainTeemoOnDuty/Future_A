@@ -1,0 +1,166 @@
+.ticket{
+    width: 100%;
+    background-color: #8CDDFD;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    font-family:'Noto Sans TC', sans-serif;
+    z-index: 1;
+}
+.ticket::before,
+.ticket::after{
+    content: "";
+    display: block;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 80px solid rgba(255, 255, 255, .25);
+    position: absolute;
+    z-index: -1;
+}
+.ticket::before{
+    top: -240px;
+    left: -100px;
+}
+.ticket::after{
+    top: 450px;
+    right: 100px;
+}
+/* Navbar - Progress Bar */
+.navbar {
+  position: fixed;
+  top: 5em;
+  left: 3em;
+  height: 240px;
+  z-index: 1;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.progress-bar--increment {
+  background-color: #000680;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  border-radius: 5px;
+}
+
+.progress-bar--circle {
+  position: absolute;
+  bottom: 5px;
+  left: -21px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.1s;
+}
+
+.progress-bar--circle.active {
+  background-color: #000680;
+}
+
+.navbar ul {
+    padding: 0 1em;
+    list-style: none;
+}
+
+.navbar ul li {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.navbar ul li a {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    transition: all 0.1s;
+}
+
+.active {
+ color: #000680 !important;
+}
+
+/* Main */
+header {
+  height: 500px;
+}
+.wrap{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.wrap .price,
+.wrap .img{
+    width: 100%;
+}
+.img img{
+    width: 60%;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+header h2, article h2, .footer h3{
+    font-family:'Noto Sans TC', sans-serif;
+    position: relative;
+    color: #000680;
+    text-align: center;
+    font-size: 36px;
+}
+header h2{
+    top: 140px;
+    font-weight: 300;
+}
+article h2{
+    padding-bottom: 50px;
+}
+article h2, article p, .footer h3{
+    padding-top: 50px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+article {
+    border: 1px solid white;
+    width: 100%;
+    height: 800px;
+    box-sizing: border-box;
+}
+article p{
+    font-size: 22px;
+    padding-top: 80px;
+    padding-left: 200px;
+}
+.footer {
+    height: 500px;
+    width: 100%;
+}
+.footer h3{
+    top: 50%;
+}
+.old-man{
+    padding-left: 0;
+}
+/*手機專用*/
+@media screen and (max-width: 767px){
+    .navbar{
+        left: 75%; 
+        background-color: transparent; 
+    }
+    article h2, article p, .footer h3{
+        font-size: 20px;
+    }
+    .img-left img{
+        padding-left: 0;
+    }
+}

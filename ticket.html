@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/ticket.css">
     <script src="js/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     
@@ -42,6 +44,72 @@
         </ul>
     </div>
 
+    <div class="ticket">
+        <nav class="navbar">
+            <div class="progress-bar"></div>
+            <div class="progress-bar--increment"></div>
+            <ul>
+                <li><a href="#top">購票資訊</a></li>
+                <li><a href="#article-1"><span class="progress-bar--circle"></span>一般票</a></li>
+                <li><a href="#article-2"><span class="progress-bar--circle"></span>優惠票</a></li>
+                <li><a href="#article-3"><span class="progress-bar--circle"></span>年度票</a></li>
+            </ul>
+        </nav>
+        
+        <header id="top">
+            <h2>購票資訊</h2>
+        </header>
+    
+        <main class="main">
+            <article class="article" id="article-1">
+            <h2>一般票</h2>
+            <div class="wrap">
+                <div class="price">
+                    <p>成人票價：<br>
+                    週一至週五：NT$550<br>
+                    週六、日及特定假日：NT$650</p>
+                </div>
+                <div class="img" data-aos="fade-left" style="padding-left: 11%">
+                    <img src="image/S__158007298.jpg" alt="">
+                </div>
+            </div>
+            </article>    
+    
+            <article class="article" id="article-2">
+            <h2>優惠票</h2>
+            <div class="wrap">
+                <div class="img" data-aos="fade-right" style="padding-left: 11%">
+                    <img src="image/S__158015490.jpg" alt="">
+                </div>
+                <div class="price">
+                    <p class="old-man">不分平假日：<br>
+                    學生／當月壽星票價：<br>
+                    NT$400<br>
+                    樂齡方案／愛心票：<br>
+                    NT$300</p>
+                </div>
+            </div>
+            </article>
+    
+            <article class="article" id="article-3">
+            <h2>年度票</h2>
+            <div class="wrap">
+                <div class="price">
+                    <p>全年無限次數入場票：<br>
+                    NT$1800</p>
+                </div>
+                <div class="img" data-aos="fade-up-left" style="padding-left: 11%">
+                    <img src="image/S__158023685.jpg" alt="">
+                </div>
+
+            </div>
+            </article>
+        </main>
+        <div class="footer">
+            <h3>Welcome to Future A</h3>
+        </div>
+    </div>
+
     <!-- footer -->
 
     <div class="bottom-white">
@@ -52,8 +120,6 @@
                 <div class="wave" id="wave3"></div>
                 <div class="wave" id="wave4"></div>
             </div>
-            <div id="top" data-text="go to top"><img src="image/icon/jellyfish.png" alt="go to top"></div>
-            <div id="theDiv"></div>
             <ul class="social_icon">
                 <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
                 <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
@@ -70,31 +136,88 @@
             <p>copyright &copy; 2021 Future A</p>
         </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         let btn = document.getElementById('top')
-        // function toTop(){
-        //     window.scroll({
-        //         behavior: "smooth",
-        //         top: 100,
-        //         left: 0
-        //     });
-        // }
         function toTop(){window.scroll({top: 0, left: 0, behavior: 'smooth'});
         }
         btn.addEventListener('click', toTop, false)
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-		$(function () {
-			$('#top').mousemove(function(e){
-				let theText = $(this).attr('data-text')
-				$('#theDiv').show().text(theText)
-			}).mouseout(function(){
-				$('#theDiv').hide();
-			});
-		});		
-	</script>
+        $(document).ready(function(){
+            // Anchor arrow click
+            // smooth scroll to anchor tag
+           $('a[href*="#"]:not([href="#featured"])').click(function() { // Check to see if anchor tag is not carousel's featured link
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  if (target.length) {
+                    // Smooth scroll to link section
+                    $('html, body').animate({
+                      scrollTop: target.offset().top + 50
+                    }, 900);
+                    return false;
+                  }
+                }
+              });
+        
+            //highlight navigation
+            $(window).scroll(function() {
+              var windowpos = $(window).scrollTop();
+              $('nav li a').removeClass('active');
+              $('.progress-bar--circle').removeClass('active');
+        
+              if (windowpos > $('#top').offset().top) {
+                $('nav li a').removeClass('active');
+                $('a[href$="#top"]').addClass('active');
+              } //windowpos
+        
+              if (windowpos > $('#article-1').offset().top) {
+                $('nav li a').removeClass('active');
+                $('a[href$="#article-1"]').addClass('active');
+                $('a[href$="#article-1"] .progress-bar--circle').addClass('active');
+              } //windowpos
+        
+              if (windowpos > $('#article-2').offset().top) {
+                $('nav li a').removeClass('active');
+                $('a[href$="#article-2"]').addClass('active');
+                $('a[href$="#article-2"] .progress-bar--circle').addClass('active');
+              } //windowpos
+        
+              if (windowpos > $('#article-3').offset().top) {
+                $('nav li a').removeClass('active');
+                $('a[href$="#article-3"]').addClass('active');
+                $('a[href$="#article-3"] .progress-bar--circle').addClass('active');
+              } //windowpos
+        
+              if (windowpos > $('.footer').offset().top) {
+                $('nav li a').removeClass('active');
+                $('a[href$=".footer"]').addClass('active');
+              } //windowpos
+        
+              // Scrollbar progression
+                  // pixels scrolled from top
+              var scrollTop = $(window).scrollTop(),
+                  // document height
+                  docHeight = $(document).height(),
+                  // window height
+                  winHeight = $(window).height(),
+                  // percent of document scrolled
+                  scrollPercent = (scrollTop) / (docHeight - winHeight),
+                  scrollPercentRounded = Math.round(scrollPercent*100);
+        
+              // incement progress bar as user scrolls
+              $('.progress-bar--increment').css('height', scrollPercentRounded + '%');
+            });
+        
+          }); // on load
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 </body>
 </html>

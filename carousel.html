@@ -60,7 +60,7 @@
             <div class="slick-slide"><img src="image/S__157999120.jpg" alt=""></div>
         </div>
         <div class="txt">
-            <p>由於武漢肺炎的關係請盡量保持適當的社交距離</p>
+            <p>由於近日疫情嚴峻的關係請盡量保持適當的社交距離</p>
         </div>
     </div>
 
@@ -123,6 +123,14 @@
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 2000,
+                responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                slidesToShow: 2
+                }
+                }
+                ]
             });
         });
     </script>

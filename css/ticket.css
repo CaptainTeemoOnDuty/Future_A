@@ -160,6 +160,9 @@ article p{
     article h2, article p, .footer h3{
         font-size: 20px;
     }
+    article p{
+        padding-left: 0;
+    }
     .img-left img{
         padding-left: 0;
     }

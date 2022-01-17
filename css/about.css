@@ -27,7 +27,7 @@
     box-sizing: border-box;
 }
 .about-txt .space{
-    background-image: url(../image/Jellyfish.jpg);
+    background-image: url(../image/Jellyfish.gif);
     background-position: right;
     background-size: 50%;
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@
     box-sizing: border-box;
 }
 .about-txt:nth-child(odd) .space{
-    background-image: url(../image/Fish.jpg);
+    background-image: url(../image/Fish.gif);
     background-position: left;
 }
 .txt{
